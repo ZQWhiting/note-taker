@@ -1,6 +1,7 @@
 const router = require('express').Router();
-let { notes } = require('../../db/db');
+const shortid = require('shortid');
 const { createNote, deleteNote } = require('../../lib/notes')
+let { notes } = require('../../db/db');
 
 router.get('/notes', (req, res) => {
     let results = notes;
@@ -8,8 +9,7 @@ router.get('/notes', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-    // give note unique id (look into npm packages)
-    req.body.id = notes.length.toString();
+    req.body.id = shortid.generate();
 
     const note = createNote(req.body, notes)
 

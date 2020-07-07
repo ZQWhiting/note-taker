@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "jest": "^26.1.0"
