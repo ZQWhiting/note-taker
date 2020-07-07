@@ -26,6 +26,7 @@ var saveNote = function (note) {
 
 // BONUS A function for deleting a note from the db
 var deleteNote = function (id) {
+  debugger;
   return $.ajax({
     url: "api/notes/" + id,
     method: "DELETE"
